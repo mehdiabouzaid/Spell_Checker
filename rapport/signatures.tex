@@ -1,0 +1,79 @@
+\documentclass[rapport.tex]{subfiles}
+
+\begin{document}	
+\begin{algorithme}
+	
+	\signaturefonction{estUnMot}
+	{chaineATester : \chaine}
+	{\booleen}	
+	
+	\signatureFonctionAvecPreconditions{mot}	
+	{chaine:\chaine}	
+	{\textbf{Mot}}
+	{{estUnMot(chaine)}}
+	
+	\signaturefonction{longueurMot}
+	{mot : \textbf{Mot}}
+	{\naturelNonNul}
+
+	\signatureFonctionAvecPreconditions{iemeCaractere}
+	{{mot : \textbf{Mot}},{ position : \naturelNonNul}}
+	{\caractere}
+	{1 $\leq$ position $\leq$ longueurMot(mot)}
+	
+	\signaturefonction{supprimerLettre}
+	{mot : \textbf{Mot}}
+	{Tableau de \textbf{Mot}}
+	
+	\signaturefonction{inverserLettre}
+	{mot : \textbf{Mot}}
+	{Tableau de \textbf{Mot}}	
+
+	\signaturefonction{motEnChaine}
+	{mot : \textbf{Mot}}
+	{\chaine}
+\\
+	\signaturefonction{sousChaine}
+	{chaine : \chaine, début,fin : \naturel}
+	{\chaine}
+	
+	\signaturefonction{compteurDeMots}
+	{chaine : \chaine}
+	{\naturel}
+
+	\signatureprocedure{decomposer}
+	{\paramEntree{ChaineADecomposer : \chaine}, 
+	\paramSortie{TableauDeMots : \tableauUneDimension {1...longueurChaineADecomposer}{de}{\chaine},TabPosition: \tableauUneDimension{1...longueurChaineADecomposer}{de}{\entier}}}
+
+	\signaturefonction
+	{TrouverLesPositions}
+	{Chaine de Caractères}
+	{Liste<NNN>}
+	
+	\signaturefonction
+	{GenererListeMots}
+	{Chaine de Caractères,Liste<NNN>}
+	{Liste<MOT>}
+	
+	\signatureprocedure{correcteur}
+	{{\paramEntree{Dico : \textbf{Dictionnaire}}, listeMot :\textbf{ Liste de Mots}}, 
+	{\paramSortie{nbCorrections : \textbf{Liste NaturelNonNul}}, {listeCorrections : \textbf{ Liste de Mots}},
+	{listeValide : \textbf{Liste de booléens}}}}
+
+	\signaturefonction{Corrections}
+	{listeEntrante:\textbf{Liste de mots}}
+	{\textbf{Liste de mots}}
+
+	\signaturefonction{motEstPresent}
+	{mot : \textbf{Mot}}
+	{\booleen}
+
+	\signatureprocedure{completerDico}
+	{{\paramEntree{fictexte : \textbf{FichierTexte}}},
+	{\paramEntreeSortie{Dico :\textbf{Dictionnaire}}}}
+	
+		
+	
+\end{algorithme}
+
+\end{document}

@@ -1,0 +1,101 @@
+\hypertarget{dictionnaire_8h}{}\section{include/dictionnaire.h File Reference}
+\label{dictionnaire_8h}\index{include/dictionnaire.\+h@{include/dictionnaire.\+h}}
+
+
+Implemantation du S\+DD \hyperlink{struct_dictionnaire}{Dictionnaire} et des fonctions associees.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Arbre\+Binaire.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_dictionnaire}{Dictionnaire}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{dictionnaire_8h_a61cb806a03b5c01d49475c01dc83cccb}{\+\_\+\+\_\+\+D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct_dictionnaire}{Dictionnaire} \hyperlink{dictionnaire_8h_a396cd1684d5129e7435bb1ecdaefe89a}{Dictionnaire}
+\begin{DoxyCompactList}\small\item\em Fonction permettant de cetruire le dictionnaire. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{dictionnaire_8h_a1a4483692c09a93061f3b32a4305e82e}{D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+completer\+Dico} (\hyperlink{struct_dictionnaire}{Dictionnaire} $\ast$dico, char Fichier\+Texte\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{dictionnaire_8h_a2a8c5c16cca015a2fb37fd2f4d1c21cf}{D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+ajouter\+Dico} (\hyperlink{struct_dictionnaire}{Dictionnaire} $\ast$dico, char mot\mbox{[}$\,$\mbox{]})
+\item 
+int \hyperlink{dictionnaire_8h_abca7bbf7589253406d34dc40800e0576}{D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+mot\+Dans\+Dico} (\hyperlink{struct_dictionnaire}{Dictionnaire} dico, char mot\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{dictionnaire_8h_aaee6af03d62dafdd0e42debc47dd0abd}{D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+detruire\+Dico} (\hyperlink{struct_dictionnaire}{Dictionnaire} $\ast$dico)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implemantation du S\+DD \hyperlink{struct_dictionnaire}{Dictionnaire} et des fonctions associees. 
+
+\begin{DoxyAuthor}{Author}
+A\+B\+O\+U\+Z\+A\+ID Mehdi, A\+N\+G\+E\+L\+O\+VA Tanya, B\+E\+L\+L\+A\+M\+L\+IH Ali, B\+E\+R\+N\+A\+RD Pierre 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{dictionnaire_8h_a61cb806a03b5c01d49475c01dc83cccb}\label{dictionnaire_8h_a61cb806a03b5c01d49475c01dc83cccb}} 
+\index{dictionnaire.\+h@{dictionnaire.\+h}!\+\_\+\+\_\+\+D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+\+\_\+@{\+\_\+\+\_\+\+D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+\+D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+\+\_\+@{\+\_\+\+\_\+\+D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+\+\_\+}!dictionnaire.\+h@{dictionnaire.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+\+D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+\+\_\+}{\_\_DICTIONNAIRE\_\_}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+\+\_\+}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{dictionnaire_8h_a396cd1684d5129e7435bb1ecdaefe89a}\label{dictionnaire_8h_a396cd1684d5129e7435bb1ecdaefe89a}} 
+\index{dictionnaire.\+h@{dictionnaire.\+h}!Dictionnaire@{Dictionnaire}}
+\index{Dictionnaire@{Dictionnaire}!dictionnaire.\+h@{dictionnaire.\+h}}
+\subsubsection{\texorpdfstring{Dictionnaire}{Dictionnaire}}
+{\footnotesize\ttfamily \hyperlink{struct_dictionnaire}{Dictionnaire}}
+
+
+
+Fonction permettant de cetruire le dictionnaire. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{struct_dictionnaire}{Dictionnaire}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_dictionnaire}{Dictionnaire} 
+\end{DoxyReturn}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{dictionnaire_8h_a2a8c5c16cca015a2fb37fd2f4d1c21cf}\label{dictionnaire_8h_a2a8c5c16cca015a2fb37fd2f4d1c21cf}} 
+\index{dictionnaire.\+h@{dictionnaire.\+h}!D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+ajouter\+Dico@{D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+ajouter\+Dico}}
+\index{D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+ajouter\+Dico@{D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+ajouter\+Dico}!dictionnaire.\+h@{dictionnaire.\+h}}
+\subsubsection{\texorpdfstring{D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+ajouter\+Dico()}{DICTIONNAIRE\_ajouterDico()}}
+{\footnotesize\ttfamily void D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+ajouter\+Dico (\begin{DoxyParamCaption}\item[{\hyperlink{struct_dictionnaire}{Dictionnaire} $\ast$}]{dico,  }\item[{char}]{mot\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dictionnaire_8h_a1a4483692c09a93061f3b32a4305e82e}\label{dictionnaire_8h_a1a4483692c09a93061f3b32a4305e82e}} 
+\index{dictionnaire.\+h@{dictionnaire.\+h}!D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+completer\+Dico@{D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+completer\+Dico}}
+\index{D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+completer\+Dico@{D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+completer\+Dico}!dictionnaire.\+h@{dictionnaire.\+h}}
+\subsubsection{\texorpdfstring{D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+completer\+Dico()}{DICTIONNAIRE\_completerDico()}}
+{\footnotesize\ttfamily void D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+completer\+Dico (\begin{DoxyParamCaption}\item[{\hyperlink{struct_dictionnaire}{Dictionnaire} $\ast$}]{dico,  }\item[{char}]{Fichier\+Texte\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dictionnaire_8h_aaee6af03d62dafdd0e42debc47dd0abd}\label{dictionnaire_8h_aaee6af03d62dafdd0e42debc47dd0abd}} 
+\index{dictionnaire.\+h@{dictionnaire.\+h}!D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+detruire\+Dico@{D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+detruire\+Dico}}
+\index{D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+detruire\+Dico@{D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+detruire\+Dico}!dictionnaire.\+h@{dictionnaire.\+h}}
+\subsubsection{\texorpdfstring{D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+detruire\+Dico()}{DICTIONNAIRE\_detruireDico()}}
+{\footnotesize\ttfamily void D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+detruire\+Dico (\begin{DoxyParamCaption}\item[{\hyperlink{struct_dictionnaire}{Dictionnaire} $\ast$}]{dico }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dictionnaire_8h_abca7bbf7589253406d34dc40800e0576}\label{dictionnaire_8h_abca7bbf7589253406d34dc40800e0576}} 
+\index{dictionnaire.\+h@{dictionnaire.\+h}!D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+mot\+Dans\+Dico@{D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+mot\+Dans\+Dico}}
+\index{D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+mot\+Dans\+Dico@{D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+mot\+Dans\+Dico}!dictionnaire.\+h@{dictionnaire.\+h}}
+\subsubsection{\texorpdfstring{D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+mot\+Dans\+Dico()}{DICTIONNAIRE\_motDansDico()}}
+{\footnotesize\ttfamily int D\+I\+C\+T\+I\+O\+N\+N\+A\+I\+R\+E\+\_\+mot\+Dans\+Dico (\begin{DoxyParamCaption}\item[{\hyperlink{struct_dictionnaire}{Dictionnaire}}]{dico,  }\item[{char}]{mot\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+

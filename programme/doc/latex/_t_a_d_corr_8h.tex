@@ -1,0 +1,156 @@
+\hypertarget{_t_a_d_corr_8h}{}\section{include/\+T\+A\+D\+Corr.h File Reference}
+\label{_t_a_d_corr_8h}\index{include/\+T\+A\+D\+Corr.\+h@{include/\+T\+A\+D\+Corr.\+h}}
+
+
+S\+DD correcteur orthographique.  
+
+
+{\ttfamily \#include \char`\"{}Mot.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dictionnaire.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Arbre\+Binaire.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_correction}{Correction}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct_correction}{Correction} \hyperlink{_t_a_d_corr_8h_a51251f113be982ca58de70fc156164c5}{Correction}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_t_a_d_corr_8h_acea1fb60c2aa1971d2e44bd55537953a}{est\+Separateur} (char c)
+\begin{DoxyCompactList}\small\item\em Fonction permettant de savoir si un caractÃšre est un sÃ©parateur de type espace, tiret ou apostrophe. \end{DoxyCompactList}\item 
+void \hyperlink{_t_a_d_corr_8h_a153879796302f0183d9ca041e98d3d61}{decomposer\+La\+Chaine} (const char $\ast$chaine, char $\ast$$\ast$$\ast$adr\+Ptr\+Mots, int $\ast$$\ast$adr\+Pos\+Dans\+Chaines)
+\begin{DoxyCompactList}\small\item\em Fonction permettant de morceler la chaine de caractÃšre en entrÃ©e pour former les mots sur lesquels on va travailler. \end{DoxyCompactList}\item 
+int \hyperlink{_t_a_d_corr_8h_a6e50139115158acacac8d3b303d06cd8}{compteur\+De\+Mots} (const char $\ast$chaine)
+\begin{DoxyCompactList}\small\item\em Fonction permettant de compter le nombre de mots contenu dans une chaine. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{_t_a_d_corr_8h_aa702b438ac560de4b965b88a6c657464}{sous\+\_\+string} (const char $\ast$s, unsigned int start, unsigned int end)
+\begin{DoxyCompactList}\small\item\em Fonction permettant de dÃ©couper une chaine de caractÃšre en sous chaine de caractÃšre. \end{DoxyCompactList}\item 
+void \hyperlink{_t_a_d_corr_8h_afa38b7479222f65eb69cbcf92563b3fc}{C\+O\+R\+R\+\_\+corriger} (\hyperlink{struct_dictionnaire}{Dictionnaire} dico, \hyperlink{_mot_8h_af7ff2707bf2a933895e650ae9490ca4d}{M\+O\+T\+\_\+\+Mot} Le\+Mot, \hyperlink{_mot_8h_af7ff2707bf2a933895e650ae9490ca4d}{M\+O\+T\+\_\+\+Mot} $\ast$tableau\+De\+Mots, int $\ast$compteur\+Des\+Corrections)
+\item 
+int \hyperlink{_t_a_d_corr_8h_ab4106594ef528180cc0c14471e59402e}{C\+O\+R\+R\+\_\+nb\+Mots} (char $\ast$str, \hyperlink{struct_dictionnaire}{Dictionnaire} dico)
+\item 
+int \hyperlink{_t_a_d_corr_8h_adc016c342693026e359b8fc20bc93e5b}{C\+O\+R\+R\+\_\+est\+Corrigeable} (\hyperlink{_mot_8h_af7ff2707bf2a933895e650ae9490ca4d}{M\+O\+T\+\_\+\+Mot} mot, \hyperlink{struct_dictionnaire}{Dictionnaire} dico)
+\item 
+\hyperlink{struct_correction}{Correction} $\ast$ \hyperlink{_t_a_d_corr_8h_afa591b6af4dc8f97ecd5c5973a054785}{correcteur} (\hyperlink{struct_dictionnaire}{Dictionnaire} dico, \hyperlink{_mot_8h_af7ff2707bf2a933895e650ae9490ca4d}{M\+O\+T\+\_\+\+Mot} $\ast$tableau\+Des\+Mots, int $\ast$nb\+Mots)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+DD correcteur orthographique. 
+
+\begin{DoxyAuthor}{Author}
+A\+B\+O\+U\+Z\+A\+ID Mehdi, A\+N\+G\+E\+L\+O\+VA Tanya, B\+E\+L\+L\+A\+M\+L\+IH Ali et B\+E\+R\+N\+A\+RD Pierre
+\end{DoxyAuthor}
+ImplÃ©mentation des fonctions et procÃ©dures du T\+AD Correcteur orthographique 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{_t_a_d_corr_8h_a51251f113be982ca58de70fc156164c5}\label{_t_a_d_corr_8h_a51251f113be982ca58de70fc156164c5}} 
+\index{T\+A\+D\+Corr.\+h@{T\+A\+D\+Corr.\+h}!Correction@{Correction}}
+\index{Correction@{Correction}!T\+A\+D\+Corr.\+h@{T\+A\+D\+Corr.\+h}}
+\subsubsection{\texorpdfstring{Correction}{Correction}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct_correction}{Correction} \hyperlink{struct_correction}{Correction}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_t_a_d_corr_8h_a6e50139115158acacac8d3b303d06cd8}\label{_t_a_d_corr_8h_a6e50139115158acacac8d3b303d06cd8}} 
+\index{T\+A\+D\+Corr.\+h@{T\+A\+D\+Corr.\+h}!compteur\+De\+Mots@{compteur\+De\+Mots}}
+\index{compteur\+De\+Mots@{compteur\+De\+Mots}!T\+A\+D\+Corr.\+h@{T\+A\+D\+Corr.\+h}}
+\subsubsection{\texorpdfstring{compteur\+De\+Mots()}{compteurDeMots()}}
+{\footnotesize\ttfamily int compteur\+De\+Mots (\begin{DoxyParamCaption}\item[{const char $\ast$}]{chaine }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant de compter le nombre de mots contenu dans une chaine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & chaine \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_t_a_d_corr_8h_afa38b7479222f65eb69cbcf92563b3fc}\label{_t_a_d_corr_8h_afa38b7479222f65eb69cbcf92563b3fc}} 
+\index{T\+A\+D\+Corr.\+h@{T\+A\+D\+Corr.\+h}!C\+O\+R\+R\+\_\+corriger@{C\+O\+R\+R\+\_\+corriger}}
+\index{C\+O\+R\+R\+\_\+corriger@{C\+O\+R\+R\+\_\+corriger}!T\+A\+D\+Corr.\+h@{T\+A\+D\+Corr.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+R\+R\+\_\+corriger()}{CORR\_corriger()}}
+{\footnotesize\ttfamily void C\+O\+R\+R\+\_\+corriger (\begin{DoxyParamCaption}\item[{\hyperlink{struct_dictionnaire}{Dictionnaire}}]{dico,  }\item[{\hyperlink{_mot_8h_af7ff2707bf2a933895e650ae9490ca4d}{M\+O\+T\+\_\+\+Mot}}]{Le\+Mot,  }\item[{\hyperlink{_mot_8h_af7ff2707bf2a933895e650ae9490ca4d}{M\+O\+T\+\_\+\+Mot} $\ast$}]{tableau\+De\+Mots,  }\item[{int $\ast$}]{compteur\+Des\+Corrections }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_t_a_d_corr_8h_adc016c342693026e359b8fc20bc93e5b}\label{_t_a_d_corr_8h_adc016c342693026e359b8fc20bc93e5b}} 
+\index{T\+A\+D\+Corr.\+h@{T\+A\+D\+Corr.\+h}!C\+O\+R\+R\+\_\+est\+Corrigeable@{C\+O\+R\+R\+\_\+est\+Corrigeable}}
+\index{C\+O\+R\+R\+\_\+est\+Corrigeable@{C\+O\+R\+R\+\_\+est\+Corrigeable}!T\+A\+D\+Corr.\+h@{T\+A\+D\+Corr.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+R\+R\+\_\+est\+Corrigeable()}{CORR\_estCorrigeable()}}
+{\footnotesize\ttfamily int C\+O\+R\+R\+\_\+est\+Corrigeable (\begin{DoxyParamCaption}\item[{\hyperlink{_mot_8h_af7ff2707bf2a933895e650ae9490ca4d}{M\+O\+T\+\_\+\+Mot}}]{mot,  }\item[{\hyperlink{struct_dictionnaire}{Dictionnaire}}]{dico }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_t_a_d_corr_8h_ab4106594ef528180cc0c14471e59402e}\label{_t_a_d_corr_8h_ab4106594ef528180cc0c14471e59402e}} 
+\index{T\+A\+D\+Corr.\+h@{T\+A\+D\+Corr.\+h}!C\+O\+R\+R\+\_\+nb\+Mots@{C\+O\+R\+R\+\_\+nb\+Mots}}
+\index{C\+O\+R\+R\+\_\+nb\+Mots@{C\+O\+R\+R\+\_\+nb\+Mots}!T\+A\+D\+Corr.\+h@{T\+A\+D\+Corr.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+R\+R\+\_\+nb\+Mots()}{CORR\_nbMots()}}
+{\footnotesize\ttfamily int C\+O\+R\+R\+\_\+nb\+Mots (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{\hyperlink{struct_dictionnaire}{Dictionnaire}}]{dico }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_t_a_d_corr_8h_afa591b6af4dc8f97ecd5c5973a054785}\label{_t_a_d_corr_8h_afa591b6af4dc8f97ecd5c5973a054785}} 
+\index{T\+A\+D\+Corr.\+h@{T\+A\+D\+Corr.\+h}!correcteur@{correcteur}}
+\index{correcteur@{correcteur}!T\+A\+D\+Corr.\+h@{T\+A\+D\+Corr.\+h}}
+\subsubsection{\texorpdfstring{correcteur()}{correcteur()}}
+{\footnotesize\ttfamily \hyperlink{struct_correction}{Correction}$\ast$ correcteur (\begin{DoxyParamCaption}\item[{\hyperlink{struct_dictionnaire}{Dictionnaire}}]{dico,  }\item[{\hyperlink{_mot_8h_af7ff2707bf2a933895e650ae9490ca4d}{M\+O\+T\+\_\+\+Mot} $\ast$}]{tableau\+Des\+Mots,  }\item[{int $\ast$}]{nb\+Mots }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_t_a_d_corr_8h_a153879796302f0183d9ca041e98d3d61}\label{_t_a_d_corr_8h_a153879796302f0183d9ca041e98d3d61}} 
+\index{T\+A\+D\+Corr.\+h@{T\+A\+D\+Corr.\+h}!decomposer\+La\+Chaine@{decomposer\+La\+Chaine}}
+\index{decomposer\+La\+Chaine@{decomposer\+La\+Chaine}!T\+A\+D\+Corr.\+h@{T\+A\+D\+Corr.\+h}}
+\subsubsection{\texorpdfstring{decomposer\+La\+Chaine()}{decomposerLaChaine()}}
+{\footnotesize\ttfamily void decomposer\+La\+Chaine (\begin{DoxyParamCaption}\item[{const char $\ast$}]{chaine,  }\item[{char $\ast$$\ast$$\ast$}]{adr\+Ptr\+Mots,  }\item[{int $\ast$$\ast$}]{adr\+Pos\+Dans\+Chaines }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant de morceler la chaine de caractÃšre en entrÃ©e pour former les mots sur lesquels on va travailler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Chaine\+De\+Caractere,tableau} & de Chaine\+De\+Caractere,Entier,tableau d\textquotesingle{}entiers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tableau de Chaine\+De\+Caractere,Entier,tableau d\textquotesingle{}entiers 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_t_a_d_corr_8h_acea1fb60c2aa1971d2e44bd55537953a}\label{_t_a_d_corr_8h_acea1fb60c2aa1971d2e44bd55537953a}} 
+\index{T\+A\+D\+Corr.\+h@{T\+A\+D\+Corr.\+h}!est\+Separateur@{est\+Separateur}}
+\index{est\+Separateur@{est\+Separateur}!T\+A\+D\+Corr.\+h@{T\+A\+D\+Corr.\+h}}
+\subsubsection{\texorpdfstring{est\+Separateur()}{estSeparateur()}}
+{\footnotesize\ttfamily int est\+Separateur (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant de savoir si un caractÃšre est un sÃ©parateur de type espace, tiret ou apostrophe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Chaine\+De\+Caractere,tableau} & de Chaine\+De\+Caractere,Entier,tableau d\textquotesingle{}entiers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tableau de Chaine\+De\+Caractere,Entier,tableau d\textquotesingle{}entiers 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_t_a_d_corr_8h_aa702b438ac560de4b965b88a6c657464}\label{_t_a_d_corr_8h_aa702b438ac560de4b965b88a6c657464}} 
+\index{T\+A\+D\+Corr.\+h@{T\+A\+D\+Corr.\+h}!sous\+\_\+string@{sous\+\_\+string}}
+\index{sous\+\_\+string@{sous\+\_\+string}!T\+A\+D\+Corr.\+h@{T\+A\+D\+Corr.\+h}}
+\subsubsection{\texorpdfstring{sous\+\_\+string()}{sous\_string()}}
+{\footnotesize\ttfamily void char $\ast$ sous\+\_\+string (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{unsigned int}]{start,  }\item[{unsigned int}]{end }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant de dÃ©couper une chaine de caractÃšre en sous chaine de caractÃšre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & char $\ast$s, unsigned int start, unsigned int end \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+chaine de caractÃšre 
+\end{DoxyReturn}

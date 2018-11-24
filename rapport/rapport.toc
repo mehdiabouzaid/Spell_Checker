@@ -1,0 +1,31 @@
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Organisation}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Absences}{3}{subsection.1.2}
+\contentsline {section}{\numberline {2}Analyse}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}Analyse descendante}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}TAD Mot}{6}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}TAD Dictionnaire}{7}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}TAD CorrecteurOrthographique}{8}{subsection.2.4}
+\contentsline {section}{\numberline {3}Conception pr\IeC {\'e}liminaire}{9}{section.3}
+\contentsline {section}{\numberline {4}Conception d\IeC {\'e}taill\IeC {\'e}e}{10}{section.4}
+\contentsline {subsection}{\numberline {4.1}Mot}{10}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Correcteur Orthographique}{12}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Dictionnaire}{15}{subsection.4.3}
+\contentsline {section}{\numberline {5}Code C et tests unitaires}{17}{section.5}
+\contentsline {subsection}{\numberline {5.1}Mot.h}{17}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Mot.c}{19}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}ArbreBinaire.h}{21}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}ArbreBinaire.c}{22}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}dictionnaire.h}{25}{subsection.5.5}
+\contentsline {subsection}{\numberline {5.6}dictionnaire.c}{26}{subsection.5.6}
+\contentsline {subsection}{\numberline {5.7}TADCorr.h}{27}{subsection.5.7}
+\contentsline {subsection}{\numberline {5.8}CorrecteurOrthographique.c}{30}{subsection.5.8}
+\contentsline {subsection}{\numberline {5.9}testMot.c}{34}{subsection.5.9}
+\contentsline {subsection}{\numberline {5.10}testDictionnaire.c}{37}{subsection.5.10}
+\contentsline {subsection}{\numberline {5.11}TestCorrecteurOrthographique.c}{39}{subsection.5.11}
+\contentsline {subsection}{\numberline {5.12}main.c}{43}{subsection.5.12}
+\contentsline {section}{\numberline {6}Conclusion}{45}{section.6}
+\contentsline {subsection}{\numberline {6.1}Conclusion Mehdi}{45}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Conclusion Tanya}{45}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Conclusion Ali}{45}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Conclusion Pierre}{45}{subsection.6.4}

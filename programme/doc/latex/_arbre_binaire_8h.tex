@@ -1,0 +1,128 @@
+\hypertarget{_arbre_binaire_8h}{}\section{include/\+Arbre\+Binaire.h File Reference}
+\label{_arbre_binaire_8h}\index{include/\+Arbre\+Binaire.\+h@{include/\+Arbre\+Binaire.\+h}}
+
+
+Implemantation du S\+DD \hyperlink{struct_dictionnaire}{Dictionnaire} et des fonctions associees.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_a_b___arbre}{A\+B\+\_\+\+Arbre}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct_a_b___arbre}{A\+B\+\_\+\+Arbre} \hyperlink{_arbre_binaire_8h_ae6767ecb38371fb6deff54a81751eb70}{A\+B\+\_\+\+Arbre}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_arbre_binaire_8h_a71a28b0af0ebb5f8f5d180580ab52a10}{A\+B\+\_\+ajouter\+Arbre\+Gauche} (\hyperlink{struct_a_b___arbre}{A\+B\+\_\+\+Arbre} $\ast$$\ast$arbre, char element)
+\begin{DoxyCompactList}\small\item\em Fonction permettant d\textquotesingle{}ajouter un Arbre\+Gauche Ã  un autre arbre (le place Ã  la racine si arbre vide) \end{DoxyCompactList}\item 
+void \hyperlink{_arbre_binaire_8h_afc5cbb785fc7c1450c754568c1d411c1}{A\+B\+\_\+ajouter\+Arbre\+Droit} (\hyperlink{struct_a_b___arbre}{A\+B\+\_\+\+Arbre} $\ast$$\ast$arbre, char element)
+\begin{DoxyCompactList}\small\item\em Fonction permettant d\textquotesingle{}ajouter un Arbre\+G\+Droit Ã  un autre arbre (le place Ã  la racine si arbre vide) \end{DoxyCompactList}\item 
+void \hyperlink{_arbre_binaire_8h_aca40159f7d5ed6ced843227689348cf9}{A\+B\+\_\+supprimer\+Arbre} (\hyperlink{struct_a_b___arbre}{A\+B\+\_\+\+Arbre} $\ast$$\ast$arbre)
+\begin{DoxyCompactList}\small\item\em Fonction permettant de detruire un arbre en liberant la mÃ©moire. \end{DoxyCompactList}\item 
+int \hyperlink{_arbre_binaire_8h_abd3f5773b1e4a7925c2ad0479dcd4ad4}{A\+B\+\_\+mot\+Est\+Present} (\hyperlink{struct_a_b___arbre}{A\+B\+\_\+\+Arbre} $\ast$arbre, char mot\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Fonction permettant de savoir si une chaine de caractÃšre est presente dans notre arbre. \end{DoxyCompactList}\item 
+void \hyperlink{_arbre_binaire_8h_a9e9995cf15e4772da1cb8e0e2fd8a0ec}{A\+B\+\_\+inserer\+Mot} (\hyperlink{struct_a_b___arbre}{A\+B\+\_\+\+Arbre} $\ast$$\ast$arbre, char mot\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implemantation du S\+DD \hyperlink{struct_dictionnaire}{Dictionnaire} et des fonctions associees. 
+
+\begin{DoxyAuthor}{Author}
+A\+B\+O\+U\+Z\+A\+ID Mehdi, A\+N\+G\+E\+L\+O\+VA Tanya, B\+E\+L\+L\+A\+M\+L\+IH Ali, B\+E\+R\+N\+A\+RD Pierre 
+\end{DoxyAuthor}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{_arbre_binaire_8h_ae6767ecb38371fb6deff54a81751eb70}\label{_arbre_binaire_8h_ae6767ecb38371fb6deff54a81751eb70}} 
+\index{Arbre\+Binaire.\+h@{Arbre\+Binaire.\+h}!A\+B\+\_\+\+Arbre@{A\+B\+\_\+\+Arbre}}
+\index{A\+B\+\_\+\+Arbre@{A\+B\+\_\+\+Arbre}!Arbre\+Binaire.\+h@{Arbre\+Binaire.\+h}}
+\subsubsection{\texorpdfstring{A\+B\+\_\+\+Arbre}{AB\_Arbre}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct_a_b___arbre}{A\+B\+\_\+\+Arbre}  \hyperlink{struct_a_b___arbre}{A\+B\+\_\+\+Arbre}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_arbre_binaire_8h_afc5cbb785fc7c1450c754568c1d411c1}\label{_arbre_binaire_8h_afc5cbb785fc7c1450c754568c1d411c1}} 
+\index{Arbre\+Binaire.\+h@{Arbre\+Binaire.\+h}!A\+B\+\_\+ajouter\+Arbre\+Droit@{A\+B\+\_\+ajouter\+Arbre\+Droit}}
+\index{A\+B\+\_\+ajouter\+Arbre\+Droit@{A\+B\+\_\+ajouter\+Arbre\+Droit}!Arbre\+Binaire.\+h@{Arbre\+Binaire.\+h}}
+\subsubsection{\texorpdfstring{A\+B\+\_\+ajouter\+Arbre\+Droit()}{AB\_ajouterArbreDroit()}}
+{\footnotesize\ttfamily A\+B\+\_\+ajouter\+Arbre\+Droit (\begin{DoxyParamCaption}\item[{\hyperlink{struct_a_b___arbre}{A\+B\+\_\+\+Arbre} $\ast$$\ast$}]{arbre,  }\item[{char}]{element }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant d\textquotesingle{}ajouter un Arbre\+G\+Droit Ã  un autre arbre (le place Ã  la racine si arbre vide) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Arbre,element(char)} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Arbre 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_arbre_binaire_8h_a71a28b0af0ebb5f8f5d180580ab52a10}\label{_arbre_binaire_8h_a71a28b0af0ebb5f8f5d180580ab52a10}} 
+\index{Arbre\+Binaire.\+h@{Arbre\+Binaire.\+h}!A\+B\+\_\+ajouter\+Arbre\+Gauche@{A\+B\+\_\+ajouter\+Arbre\+Gauche}}
+\index{A\+B\+\_\+ajouter\+Arbre\+Gauche@{A\+B\+\_\+ajouter\+Arbre\+Gauche}!Arbre\+Binaire.\+h@{Arbre\+Binaire.\+h}}
+\subsubsection{\texorpdfstring{A\+B\+\_\+ajouter\+Arbre\+Gauche()}{AB\_ajouterArbreGauche()}}
+{\footnotesize\ttfamily A\+B\+\_\+ajouter\+Arbre\+Gauche (\begin{DoxyParamCaption}\item[{\hyperlink{struct_a_b___arbre}{A\+B\+\_\+\+Arbre} $\ast$$\ast$}]{arbre,  }\item[{char}]{element }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant d\textquotesingle{}ajouter un Arbre\+Gauche Ã  un autre arbre (le place Ã  la racine si arbre vide) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Arbre,element(char)} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Arbre 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_arbre_binaire_8h_a9e9995cf15e4772da1cb8e0e2fd8a0ec}\label{_arbre_binaire_8h_a9e9995cf15e4772da1cb8e0e2fd8a0ec}} 
+\index{Arbre\+Binaire.\+h@{Arbre\+Binaire.\+h}!A\+B\+\_\+inserer\+Mot@{A\+B\+\_\+inserer\+Mot}}
+\index{A\+B\+\_\+inserer\+Mot@{A\+B\+\_\+inserer\+Mot}!Arbre\+Binaire.\+h@{Arbre\+Binaire.\+h}}
+\subsubsection{\texorpdfstring{A\+B\+\_\+inserer\+Mot()}{AB\_insererMot()}}
+{\footnotesize\ttfamily void A\+B\+\_\+inserer\+Mot (\begin{DoxyParamCaption}\item[{\hyperlink{struct_a_b___arbre}{A\+B\+\_\+\+Arbre} $\ast$$\ast$}]{arbre,  }\item[{char}]{mot\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_arbre_binaire_8h_abd3f5773b1e4a7925c2ad0479dcd4ad4}\label{_arbre_binaire_8h_abd3f5773b1e4a7925c2ad0479dcd4ad4}} 
+\index{Arbre\+Binaire.\+h@{Arbre\+Binaire.\+h}!A\+B\+\_\+mot\+Est\+Present@{A\+B\+\_\+mot\+Est\+Present}}
+\index{A\+B\+\_\+mot\+Est\+Present@{A\+B\+\_\+mot\+Est\+Present}!Arbre\+Binaire.\+h@{Arbre\+Binaire.\+h}}
+\subsubsection{\texorpdfstring{A\+B\+\_\+mot\+Est\+Present()}{AB\_motEstPresent()}}
+{\footnotesize\ttfamily A\+B\+\_\+mot\+Est\+Present (\begin{DoxyParamCaption}\item[{\hyperlink{struct_a_b___arbre}{A\+B\+\_\+\+Arbre} $\ast$}]{arbre,  }\item[{char}]{mot\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant de savoir si une chaine de caractÃšre est presente dans notre arbre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Arbre,chaine} & de caracteres \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+booleen(int) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_arbre_binaire_8h_aca40159f7d5ed6ced843227689348cf9}\label{_arbre_binaire_8h_aca40159f7d5ed6ced843227689348cf9}} 
+\index{Arbre\+Binaire.\+h@{Arbre\+Binaire.\+h}!A\+B\+\_\+supprimer\+Arbre@{A\+B\+\_\+supprimer\+Arbre}}
+\index{A\+B\+\_\+supprimer\+Arbre@{A\+B\+\_\+supprimer\+Arbre}!Arbre\+Binaire.\+h@{Arbre\+Binaire.\+h}}
+\subsubsection{\texorpdfstring{A\+B\+\_\+supprimer\+Arbre()}{AB\_supprimerArbre()}}
+{\footnotesize\ttfamily A\+B\+\_\+supprimer\+Arbre (\begin{DoxyParamCaption}\item[{\hyperlink{struct_a_b___arbre}{A\+B\+\_\+\+Arbre} $\ast$$\ast$}]{arbre }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant de detruire un arbre en liberant la mÃ©moire. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Arbre} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Arbre 
+\end{DoxyReturn}

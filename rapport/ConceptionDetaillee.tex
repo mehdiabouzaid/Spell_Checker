@@ -1,0 +1,293 @@
+\documentclass[rapport.tex]{subfiles}
+\begin{document}
+	
+	
+	\subsection{Mot}
+	
+	\fonction{MOT\_estUnMot 	
+		
+	}{chaine : \chaine}{\booleen}{i : \naturelNonNul, estMot : \booleen, c : \caractere}{
+	
+	\affecter{i}{1}
+	
+	\affecter{estMot}{VRAI}
+	
+	\affecter{c}{chaine[1]}
+	
+	\tantque{estMot et i $\leq$ longueur(chaine)}{
+		
+		\affecter{c}{chaine[i]}
+		
+		\sialorssinon{((c$\geq$'a' et c$\leq$'z') ou (c$\geq$'A'et c$\leq$'Z') ou (c$==$'Š') ou (c$==$'š') ou (c=='Ž') ou (c$==$'ž') ou (c$\geq$'Œ' et c$\leq$'Ÿ') ou (c$\geq$'À' et c$\leq$'Ö') ou (c$\geq$'Ø' et c$\leq$'ö') ou (c$\geq$'ø' et c$\leq$'ÿ'))}
+		
+		{\affecter{i}{i+1}}
+		
+		{estMot=FAUX}
+		
+	}
+	
+	\retourner{estMot}}
+
+
+
+\fonction{MOT\_mot}{chaine : \chaine}{\textbf{Mot}}{newMot : \textbf{Mot}}{
+	
+	\sialors{estUnMot(chaine)}{
+		
+		\affecter{newMot}{chaine}
+		
+		\retourner{newMot}}	
+	
+}
+
+
+
+\fonction{MOT\_longueurMot}{leMot : \textbf{Mot}}{\naturelNonNul}{i : \naturelNonNul}{
+	
+	\tantque{leMot[i]$\neq$'\0'}{
+		
+		\affecter{i}{i+1}}
+	
+	\retourner{i}
+	
+}
+
+
+
+\fonction{MOT\_iemeCaractere}{leMot : \textbf{Mot}, position:\naturelNonNul}{\caractere}{}{
+	
+	\sialors{position$\leq$longueurMot(leMot)}{
+		
+		\retourner{leMot[position]}}
+	
+}
+
+
+
+\fonction{supprimerUneLettre}{leMot : \textbf{Mot}, position: \naturelNonNul}{\textbf{Mot}}{i : \naturelNonNul}{
+	
+	\pour{i}{position}{longueurMot(leMot)}{}{
+		
+		motAvecSuppression[i]=motAvecSuppression[i+1]}
+	
+	\affecter{motAvecSupression[i]}{\textbackslash 0}
+	
+	\retourner{motAvecSupression}
+	
+}
+
+
+
+\fonction{MOT\_supprimerLettre}{leMot : \textbf{Mot}}{Tableau de \textbf{Mot}}{i : \naturelNonNul, tableauSuppressions : Tableau de \textbf{Mot}}{
+	
+	\pour{i}{1}{longueurMot(leMot)}{}{
+		
+		\affecter{tableauSuppressions[i]}{supprimerUneLettre(leMot,i)}
+		
+		\affecter{i}{i+1}
+		
+	}
+	
+	\retourner{tableauSuppressions}
+	
+}
+
+
+
+\fonction{inverserDeuxLettres}{leMot : \textbf{Mot}, position: \naturelNonNul}{\textbf{Mot}}{}{
+	
+	\sialors{position<longueurMot(leMot)}{
+		
+		\affecter{motAvecInversion[position]}{leMot[position+1]}
+		
+		\affecter{motAvecInversion[position+1]}{leMot[position]}}
+	
+	\retourner{motAvecInversion}
+	
+}
+
+
+
+\fonction{MOT\_inverserLettre}{leMot : \textbf{Mot}}{Tableau de \textbf{Mot}}{i : \naturelNonNul, tableauInversions : Tableau de \textbf{Mot}}{
+	
+	\pour{i}{1}{longueurMot(leMot)-1}{}{
+		
+		\affecter{tableauInversions[i]}{inverserDeuxLettres(leMot,i)}
+		
+		\affecter{i}{i+1}
+		
+	}
+	
+	\retourner{tableauInversions}
+	
+}
+
+
+
+\fonction{MOT\_motEnChaine}{leMot : \textbf{Mot}}{\chaine}{}{
+	
+	\retourner{leMot}}
+
+\subsection{Correcteur Orthographique}
+
+\typeFonction{sousChaine}{chaine: \chaine, debut, fin:\naturelNonNul}{\chaine}{nouveauS :\chaine }{
+	\affecter{nouveauS}{""}
+	\sialors{chaine$\neq$""}{
+		\pour{i}{debut}{fin}{}{
+			\affecter{nouveauS[i-debut]}{s[i]}
+		}}
+		\retourner{nouveauS}
+	}
+	
+	\fonction{estSeparateur}{car: \caractere}{\booleen}{}{
+		\retourner{(car$\neq$(" ")) ou (car$\neq$("'")) ou (car$\neq$( "-")}
+	}
+	
+	
+	\fonction{compteurDeMots}{chaine : \chaine}{\naturel}{compteur,i : \naturel ,motLu : \booleen}{
+		
+		\affecter{compteur}{0}
+		\affecter{i}{0}
+		
+		\tantque{i$\leq$ longueur(chaine)}{
+			\affecter{motLu}{faux}
+			\tantque{ non \textbf{estSeparateur}(\textbf{ièmeCaractère}(i)) }{
+				\affecter{i}{i+1}
+				\affecter{motLu}{vrai}
+			}
+			\sialors{motLu}{\affecter{compteur}{compteur+1}}
+			\tantque{\textbf{estSeparateur(\textbf{ièmeCaractère}(i)) }}{\affecter{i}{i+1}}
+		}
+		\retourner{compteur}
+	}
+	
+	\procedure{decomposerLaChaine}{\paramEntree{chaine \chaine}; \paramSortie{TableauDeMots : \tableauUneDimension{ {0..longueur(chaine)}{de}{\chaine}}},TableauDePos : \tableauUneDimension{0..longueur(chaine)}{d'}{\Entier}}{nbreDeMots,i,j,compteur : \naturel, motLu : \booleen, chaineADecomposer : \chaine}{
+				\affecter{i}{0}
+				\affecter{j}{0}
+				\affecter{compteur}{0}
+				\affecter{TableauDePos}{0}
+				\tantque{i$\leq$ longueur(chaine)}{
+					\affecter{faux}{motLu}
+					\tantque{ non\textbf{estSeparateur}
+						(\textbf{ièmeCaractère}(i)) }{
+						\affecter{i}{i+1}
+						\affecter{motLu}{vrai}
+					}
+					\sialors{motLu}{
+						\affecter{chaineADecomposer}{\textbf{sousChaine}(chaine,j,i-1)}
+						\affecter {TableauDeMots[compteur]}{chaineADecomposer}
+						\affecter{TableauDePos[compteur+1]}{i+1}
+						\affecter{compteur}{compteur+1}
+						\affecter{j}{i+1}
+					}
+					\tantque{\textbf{estSeparateur(\textbf{ièmeCaractère}(i)) }}
+					{\affecter{i}{i+1}}
+				}
+			}
+		
+\fonction{CORRestCorrigeable}{mot: \textbf{Mot}, dico:\textbf{Dictionnaire}}{\booleen}{}{
+	\sialorssinon{DICTIONNAIREmotDansDico(*dico, MOT\_motEnChaine(mot))}{\retourner{Faux}}{\retourner{Vrai}}
+	
+}
+
+\fonction{CORRnbMots}{str: \chaine, dico:\textbf{Dictionnaire}}{\naturel}{mot : \textbf{Mot}, tableauDeMots : Tableau de \textbf{Mot},res : \naturel}{
+	
+	\affecter{mot}{MOTmot(str)}\\
+	
+	CORRcorriger(dico, mot, tableauDeMots, &res )
+	
+	\retourner{res}
+	
+}
+
+\procedure{CORRcorriger}{\paramEntree{dico:\textbf{Dictionnaire},LeMot:\textbf{Mot}};\paramSortie{tableauDeMots:\tableauUneDimension{{0}{2*longeur(LeMot)-1}{\textbf{Mot}}},compteurDesCorrections:\naturel}{i,j,l:\naturel,t:\tableauUneDimension{{0}{2*longeur(LeMot)}{\textbf{Mot}}},t1:\tableauUneDimension{{0}{longeur(LeMot)}{\textbf{Mot}}},t2:\tableauUneDimension{{0}{longeur(LeMot)-1}{\textbf{Mot}}}}}{}{
+
+\affecter{l}{MOTlongueurMot(LeMot)}
+
+\affecter{t1}{MOTsupprimerLettre(LeMot)}
+
+\affecter{t2}{MOTinverserLettre(LeMot)}
+
+\affecter{*compteurDesCorrections}{0}
+
+\pour{i}{0}{l-1}{}{
+	
+	\affecter{t[i]}{t1[i]}
+	
+}
+
+\pour{i}{0}{l-1}{}{
+	
+	\affecter{t[i+l]}{t2[i]}
+	
+}
+
+\affecter{j}{1}	
+
+\pour{i}{0}{(2*l)-1}{}{
+	
+	\sialors{(DICTIONNAIREmotDansDico(dico, MOTmotEnChaine(t[i])))}{
+		
+		\affecter{tableauDeMots[j]}{t[i]}
+		
+		\affecter{j}{j+1}}
+	
+}
+}
+
+\fonction{correcteur}{dico: textbf{Dictionnaire}, nbMots:\naturel,  tableauDesMots:\tableauUneDimension{{0}{nbMots}{\textbf{Mot}}}}{Tableau de \textbf{Corrections}}{i : \naturel, tableauCorrections : Tableau de \textbf{Corrections}}{
+	
+	\pour{i}{0}{nbMots}{}{
+		
+		\sialors{MOTestUnMot(MOTmotEnChaine(tableauDesMots[i]))}{
+			
+			\affecter{tableauCorrections[i].mot}{tableauDesMots[i]}	
+			
+			\sialorssinon{CORRestCorrigeable(tableauDesMots[i], dico)}{
+				
+				\affecter{tableauCorrections[i].siMotBienEcrit}{FALSE}\\
+				
+				CORR_corriger (dico, tableauDesMots[i], tableauCorrections[i].tabCorrections, &tableauCorrections[i].nbCorrections)	}
+			
+			{\affecter{tableauCorrections[i].siMotBienEcrit}{TRUE}\\
+				
+				\affecter{tableauCorrections[i].nbCorrections}{0}\\
+				
+				\affecter{tableauCorrections[i].tabCorrections[1]}{NULL}}		}
+		
+	}
+	
+	\retourner{tableauCorrections}
+	
+}
+
+	
+\subsection{Dictionnaire}
+
+\fonction{DICTIONNAIRE\_completerDico}{dico : \textbf{Dictionnaire}, FichierTexte : \chaine}{\textbf{Dictionnaire}}{}{
+\pour{i}{Debut FichierTexte}{Fin FichierTExte}{}{chaine = ligne(i)DICTIONNAIRE\_ajouterDico(dico,chaine)}
+}
+
+\fonction{AB\_ajouterArbreDroit}{arbre : \textbf{AB\_Arbre}, element : \textbf{caractere}}{\textbf{Dictionnaire}}{}{
+\sialors{(arbre est vide)}{clé arbre = element}
+
+\sialors{(arbre non est vide)}{obtenir fils le plus à droite de l'arbre et inserer clé arbre}
+}
+
+
+\fonction{AB\_ajouterArbreGauche}{arbre : \textbf{AB\_Arbre}, element : \textbf{caractere}}{\textbf{Dictionnaire}}{}{
+
+\sialors{(arbre est vide)}{clé arbre = element}
+
+\sialors{(arbre non est vide)}{obtenir fils le plus à droite du premier fils gauche de l'arbre et inserer clé arbre}}
+
+\fonction{AB\_ajouterArbreDroit}{arbre : \textbf{AB\_Arbre}, mot : \textbf{chaine de caractere}}{\textbf{booleen}}{}{
+
+\tantque{dernier caractère de mot non atteint}
+
+{\sialors{derniere lettre de mot ET estMot(mot)}{\retourner{VRAI}}
+	
+	\sialors{fin du dictionnaire atteint OU dernière lettre de mot atteinte et non estMot(mot)}{\retourner{FAUX}}
+}
+}
+\end{document}			

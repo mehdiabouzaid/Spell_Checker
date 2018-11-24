@@ -1,0 +1,57 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{pdfpages}
+\usepackage[frenchb]{babel}
+\usepackage[utf8]{inputenc} %entrée
+\usepackage[T1]{fontenc} %sortie
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{scrextend}
+\usepackage{subfiles}
+\usepackage{listings}
+\usepackage{algorithmeUTF8}
+\usepackage{classeRapport}
+
+\begin{document}
+
+\PageDeGarde	
+{logo.png} % image sur la page de garde
+{Correcteur orthographique} % titre principal
+{Projet C} % sous-titre
+{Mehdi ABOUZAID \\
+Tanya ANGELOVA \\
+Ali BELLAMLIH \\
+Pierre BERNARD} % noms
+{Algorithmique avancée - ASI - 2018} % bas de page
+
+\Page{INSALogo}{rien.png} % logo de bas de page (en bas a droite)
+
+\tableofcontents
+
+\newpage
+\section{Introduction}
+\subfile{introduction}
+
+\newpage
+\section{Analyse}
+\subfile{TAD}
+
+\newpage
+\section{Conception préliminaire}
+//\subfile{signatures}
+
+\newpage
+\section{Conception détaillée}
+\subfile{ConceptionDetaillee}
+
+\newpage
+\section{Code C et tests unitaires}
+\subfile{code}
+
+\newpage
+\section{Conclusion}
+\subfile{conclusion}
+
+
+\end{document}
